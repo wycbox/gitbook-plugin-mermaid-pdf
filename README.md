@@ -8,7 +8,7 @@ And use it for your book with in the book.json:
 
 ```json
 {
-  "plugins": ["mermaid-gb3"]
+  "plugins": ["mermaid-flow"]
 }
 ```
 
