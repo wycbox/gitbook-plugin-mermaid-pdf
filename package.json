@@ -1,0 +1,18 @@
+{
+  "name": "gitbook-plugin-mermaid-flow",
+  "description": "GitBook 3 使用 Mermaid flow 生成 html",
+  "main": "index.js",
+  "version": "0.0.1",
+  "engines": {
+    "gitbook": ">=3.0.0"
+  },
+  "homepage": "https://github.com/liushilive/gitbook-plugin-mermaid-flow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liushilive/gitbook-plugin-mermaid-flow.git"
+  },
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/liushilive/gitbook-plugin-mermaid-flow/issues"
+  }
+}
