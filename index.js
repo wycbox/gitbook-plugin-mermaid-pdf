@@ -4,8 +4,29 @@ const path = require('path');
 const crypto = require('crypto');
 const url = require('url');
 var os = require('os');
+var binPath = "";
 var isWin = /^win/.test(process.platform);
-const binPath = isWin ? path.join(__dirname, "../.bin/mmdc.cmd") : path.join(__dirname, "../.bin/mmdc");
+if (isWin) {
+  childProcess.execFile('where', ['mmdc.cmd'], function (err, stdout, stderr) {
+    if (err || stderr) {
+      console.error("err=");
+      console.error(err || stderr);
+      reject(err || stderr);
+    } else {
+      binPath = stdout.split(/\r?\n/)[0];
+    }
+  });
+} else {
+  childProcess.execFile('which', ['mmdc'], function (err, stdout, stderr) {
+    if (err || stderr) {
+      console.error("err=");
+      console.error(err || stderr);
+      reject(err || stderr);
+    } else {
+      binPath = stdout.split(/\r?\n/)[0];
+    }
+  });
+}
 
 function _string2svgAsync(mmdString) {
   const filename = 'foo' + crypto.randomBytes(4).readUInt32LE(0) + 'bar';

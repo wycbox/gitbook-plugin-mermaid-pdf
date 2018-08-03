@@ -4,6 +4,10 @@ Plugin for [GitBook](https://github.com/GitbookIO/gitbook) 3 which renders [Merm
 
 ## How to install it
 
+```bash
+npm install -g mermaid.cli
+```
+
 And use it for your book with in the book.json:
 
 ```json
