@@ -1,18 +1,18 @@
 {
-  "name": "gitbook-plugin-mermaid-flow",
-  "description": "GitBook 3 使用 Mermaid flow 生成 html",
+  "name": "gitbook-plugin-mermaid-pdf",
+  "description": "GitBook 3 使用 Mermaid flow 生成 html和pdf",
   "main": "index.js",
   "version": "0.0.7",
   "engines": {
     "gitbook": ">=3.0.0"
   },
-  "homepage": "https://github.com/liushilive/gitbook-plugin-mermaid-flow",
+  "homepage": "https://github.com/wwformat/gitbook-plugin-mermaid-pdf",
   "repository": {
     "type": "git",
-    "url": "https://github.com/liushilive/gitbook-plugin-mermaid-flow.git"
+    "url": "https://github.com/wwformat/gitbook-plugin-mermaid-pdf.git"
   },
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/liushilive/gitbook-plugin-mermaid-flow/issues"
+    "url": "https://github.com/wwformat/gitbook-plugin-mermaid-pdf/issues"
   }
 }
