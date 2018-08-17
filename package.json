@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-mermaid-pdf",
   "description": "GitBook 3 使用 Mermaid flow 生成 html和pdf",
   "main": "index.js",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "engines": {
     "gitbook": ">=3.0.0"
   },
