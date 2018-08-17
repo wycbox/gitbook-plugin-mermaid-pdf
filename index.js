@@ -36,18 +36,18 @@ function _string2svgAsync(mmdString) {
       if (err) {
         return console.error(err);
       }
-      childProcess.execFile(binPath, ['-t', 'forest', '-i', tmpFile], function (err, stdout, stderr) {
+      childProcess.execFile(binPath, ['-t', 'forest', '-i', tmpFile, '-o', tmpFile + ".png"], function (err, stdout, stderr) {
         if (err || stderr) {
           console.error("err=");
           console.error(err || stderr);
           fs.unlinkSync(tmpFile);
           reject(err || stderr);
         } else {
-          const text = fs.readFileSync(tmpFile + '.svg', 'utf8');
+          const data = fs.readFileSync(tmpFile + '.png');
           fs.unlinkSync(tmpFile);
-          fs.unlinkSync(tmpFile + '.svg');
-          var trim = text.trim();
-          resolve("\n<!--mermaid-->\n<div>\n" + trim + "\n</div>\n<!--endmermaid-->\n\n");
+          fs.unlinkSync(tmpFile + '.png');
+          var base64 = Buffer.from(data).toString('base64');
+          resolve("\n<!--mermaid-->\n<div>\n<img src=\"data:image/png;base64," + base64 + "\"/>\n</div>\n<!--endmermaid-->\n\n");
         }
       });
     });
